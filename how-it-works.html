@@ -49,11 +49,10 @@
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div class="container mx-auto flex items-center justify-between h-20">
+        <div class="container mx-auto flex items-center justify-between h-24">
             <!-- Logo -->
             <a href="index.html" class="flex-shrink-0">
-                <img src="assets/images/logos/PikNPakit Logo full bleu.png" alt="PIK N PAKIT" class="h-10 w-auto"
-                    onerror="this.src='https://placehold.co/150x40?text=PIK+N+PAKIT&font=roboto';this.onerror=null;">
+                <img src="assets/images/logos/with_name.png" alt="PIK N PAKIT" class="h-16 w-auto">
             </a>
 
             <!-- Desktop Menu -->
@@ -115,20 +114,24 @@
     <!-- Header -->
     <header class="bg-brand-gray/30 py-16 text-center">
         <div class="container mx-auto px-6">
-            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">The Process</h1>
-            <p class="text-gray-600 max-w-xl mx-auto text-lg">Seamlessly integrated end-to-end fulfillment.</p>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 animate-load">How it works</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg animate-load anim-delay-100">Simple, transparent, and
+                designed for speed.</p>
         </div>
     </header>
 
     <!-- Steps Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="relative">
-                <!-- Vertical Line -->
-                <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-100 -ml-px"></div>
+                <!-- Vertical Line (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 w-0.5 bg-gray-200 h-full transform -translate-x-1/2">
+                </div>
+                <!-- Vertical Line (Mobile) -->
+                <div class="md:hidden absolute left-8 w-0.5 bg-gray-200 h-full"></div>
 
                 <!-- Step 1 -->
-                <div class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between">
+                <div class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between reveal-on-scroll">
                     <div class="order-1 md:w-5/12"></div>
                     <div
                         class="z-10 order-2 flex items-center justify-center w-16 h-16 bg-white text-brand-navy rounded-full shadow-md border-2 border-brand-navy">
@@ -142,7 +145,8 @@
                 </div>
 
                 <!-- Step 2 -->
-                <div class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between">
+                <div
+                    class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between reveal-on-scroll delay-100">
                     <div class="order-3 md:order-1 md:w-5/12 md:pr-12 pl-12 md:pl-0 md:text-right">
                         <h3 class="font-display text-2xl font-bold text-brand-navy mb-3">Orders enter the system</h3>
                         <p class="text-gray-600 leading-relaxed">Our system integrates with your sales channels. When an
@@ -156,7 +160,8 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between">
+                <div
+                    class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between reveal-on-scroll delay-200">
                     <div class="order-1 md:w-5/12"></div>
                     <div
                         class="z-10 order-2 flex items-center justify-center w-16 h-16 bg-white text-brand-navy border-2 border-brand-navy rounded-full shadow-md">
@@ -170,7 +175,8 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between">
+                <div
+                    class="relative flex flex-col md:flex-row items-center mb-16 md:justify-between reveal-on-scroll delay-300">
                     <div class="order-3 md:order-1 md:w-5/12 md:pr-12 pl-12 md:pl-0 md:text-right">
                         <h3 class="font-display text-2xl font-bold text-brand-navy mb-3">Real-time visibility</h3>
                         <p class="text-gray-600 leading-relaxed">Track order status from "Pending" to "Delivered" in
@@ -184,7 +190,8 @@
                 </div>
 
                 <!-- Step 5 -->
-                <div class="relative flex flex-col md:flex-row items-center md:justify-between">
+                <div
+                    class="relative flex flex-col md:flex-row items-center md:justify-between reveal-on-scroll delay-400">
                     <div class="order-1 md:w-5/12"></div>
                     <div
                         class="z-10 order-2 flex items-center justify-center w-16 h-16 bg-brand-teal text-white rounded-full shadow-md border-4 border-white">

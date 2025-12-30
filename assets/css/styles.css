@@ -15,7 +15,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -28,13 +33,16 @@ html {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #cbd5e1;
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
 }
@@ -42,4 +50,98 @@ html {
 /* Utility for removing mobile tap highlight */
 * {
     -webkit-tap-highlight-color: transparent;
+}
+
+/* 
+   ---------------------------
+   ANIMATIONS 
+   ---------------------------
+   Calm, predictable, controlled.
+*/
+
+/* Initial hidden state for scroll reveals */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(16px);
+    /* ~1rem move up */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Visible state */
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}
+
+/* Page Load Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility for Hero sections or immediate load items */
+.animate-load {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    /* Start hidden */
+}
+
+/* Delays for animation keyframes */
+.anim-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.anim-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.anim-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.anim-delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* 
+   ---------------------------
+   REDUCED MOTION 
+   ---------------------------
+*/
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .animate-load {
+        animation: none;
+        opacity: 1;
+    }
 }
