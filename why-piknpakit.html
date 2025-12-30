@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why PIK N PAKIT | The Logic</title>
+    <meta name="description"
+        content="Why choose us? SaaS logic adapted to Lebanese reality. Storage, fulfillment, and COD visibility in one system.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#252E5A',
+                            teal: '#3B87A9',
+                            white: '#FFFFFF',
+                            dark: '#1E2433',
+                            gray: '#F3F4F6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Helvetica Now Display', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    container: {
+                        center: true,
+                        padding: '1.5rem',
+                        screens: {
+                            lg: '1124px',
+                            xl: '1124px',
+                            '2xl': '1124px',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-brand-dark font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div class="container mx-auto flex items-center justify-between h-20">
+            <a href="index.html" class="flex-shrink-0">
+                <img src="assets/images/logos/PikNPakit Logo full bleu.png" alt="PIK N PAKIT" class="h-10 w-auto"
+                    onerror="this.src='https://placehold.co/150x40?text=PIK+N+PAKIT&font=roboto';this.onerror=null;">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html"
+                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Home</a>
+                <a href="how-it-works.html"
+                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">How it Works</a>
+                <a href="who-its-for.html"
+                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Who it's For</a>
+                <a href="why-piknpakit.html"
+                    class="text-brand-navy font-bold text-sm border-b-2 border-brand-navy pb-1">Why Us</a>
+                <a href="about.html"
+                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">About</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="contact.html"
+                    class="bg-brand-navy text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors border border-transparent shadow-sm hover:shadow-md">
+                    Request a Demo
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-brand-navy p-2 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white">
+        <div class="flex flex-col h-full p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-display text-xl font-bold text-brand-navy">PIK N PAKIT</span>
+                <button id="close-menu-btn" class="text-brand-dark p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 text-lg font-medium text-brand-navy">
+                <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
+                <a href="how-it-works.html" class="border-b border-gray-100 pb-2">How it Works</a>
+                <a href="who-its-for.html" class="border-b border-gray-100 pb-2">Who it's For</a>
+                <a href="why-piknpakit.html" class="text-brand-teal border-b border-gray-100 pb-2">Why Us</a>
+                <a href="about.html" class="border-b border-gray-100 pb-2">About</a>
+                <a href="contact.html" class="text-brand-teal pt-2">Request a Demo →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-brand-gray/30 py-16 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">Why PIK N PAKIT?</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">Because logistics should be the quietest, most reliable
+                part of your business.</p>
+        </div>
+    </header>
+
+    <!-- Differentiation Points -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
+
+                <!-- Point 1 -->
+                <div class="flex flex-col">
+                    <div class="h-1 w-20 bg-brand-teal mb-8"></div>
+                    <h2 class="font-display text-3xl font-bold text-brand-navy mb-4">One System, Total Clarity</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                        Storage, fulfillment, and COD visibility are usually scattered across spreadsheets, WhatsApp
+                        chats, and delivery company portals.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        We bring it all into <strong>one system</strong>. You log in, see your stock, see your orders,
+                        and see your money. No guessing.
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="flex flex-col">
+                    <div class="h-1 w-20 bg-brand-navy mb-8"></div>
+                    <h2 class="font-display text-3xl font-bold text-brand-navy mb-4">SaaS Logic, Lebanese Reality</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                        Standard software doesn't understand the complexities of Lebanese logistics—unnamed streets,
+                        cash handling, and currency fluctuations.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our platform is built with <strong>SaaS precision</strong> but adapted specifically for this
+                        market. It handles the chaos so you don't have to.
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex flex-col">
+                    <div class="h-1 w-20 bg-brand-navy mb-8"></div>
+                    <h2 class="font-display text-3xl font-bold text-brand-navy mb-4">Dashboards, Not WhatsApp</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                        "Where is my order?" shouldn't require a phone call.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        We replace the "WhatsApp chaos" with clean, real-time <strong>dashboards</strong>. You have the
+                        answer before your customer even asks.
+                    </p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="flex flex-col">
+                    <div class="h-1 w-20 bg-brand-teal mb-8"></div>
+                    <h2 class="font-display text-3xl font-bold text-brand-navy mb-4">Boutique Attention, Scalable
+                        Systems</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                        Big logistics companies treat you like a number. Small couriers lack the tech.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        We offer the sweet spot: <strong>Industrial-grade systems</strong> with a partner who actually
+                        knows your business name and cares about your growth.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="bg-brand-navy py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl font-bold text-white mb-6">Ready for a system that works?</h2>
+            <p class="text-gray-300 max-w-xl mx-auto mb-10">Join the sellers who have moved from chaos to control.</p>
+            <a href="contact.html"
+                class="inline-block bg-brand-teal text-white px-8 py-3.5 rounded-full font-medium hover:bg-white hover:text-brand-navy transition-all shadow-lg">
+                Talk to an Expert
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-white pt-16 pb-8 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="assets/images/logos/logo-white.png" alt="PIK N PAKIT" class="h-8 mb-6"
+                        onerror="this.src='https://placehold.co/150x40/252E5A/FFFFFF?text=PIK+N+PAKIT';">
+                    <p class="text-gray-300 text-sm leading-relaxed max-w-sm">
+                        Tech-enabled fulfillment for Lebanese businesses. Clarity, speed, and control in every order.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="about.html" class="hover:text-brand-teal transition-colors">About Us</a></li>
+                        <li><a href="how-it-works.html" class="hover:text-brand-teal transition-colors">How it Works</a>
+                        </li>
+                        <li><a href="who-its-for.html" class="hover:text-brand-teal transition-colors">Who it's For</a>
+                        </li>
+                        <li><a href="why-piknpakit.html" class="text-brand-teal transition-colors">Why PIK N PAKIT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="contact.html" class="hover:text-brand-teal transition-colors">Request a Demo</a>
+                        </li>
+                        <li><a href="mailto:hello@piknpakit.com"
+                                class="hover:text-brand-teal transition-colors">hello@piknpakit.com</a></li>
+                        <li><span class="opacity-70">Beirut, Lebanon</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-xs text-gray-400">© 2025 PIK N PAKIT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

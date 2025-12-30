@@ -1,0 +1,45 @@
+/* Custom Fonts and Overrides */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-navy: #252E5A;
+    --color-teal: #3B87A9;
+    --color-white: #FFFFFF;
+    --color-dark-neutral: #1E2433;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark-neutral);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Utility for removing mobile tap highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
