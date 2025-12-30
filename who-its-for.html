@@ -48,29 +48,39 @@
 <body class="bg-white text-brand-dark font-sans flex flex-col min-h-screen">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
         <div class="container mx-auto flex items-center justify-between h-24">
+            <!-- Logo -->
             <a href="index.html" class="flex-shrink-0">
                 <img src="assets/images/logos/with_name.png" alt="PIK N PAKIT" class="h-24 w-auto">
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10">
                 <a href="index.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Home</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">Home</a>
                 <a href="how-it-works.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">How it Works</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">How
+                    it Works</a>
                 <a href="who-its-for.html"
-                    class="text-brand-navy font-bold text-sm border-b-2 border-brand-navy pb-1">Who it's For</a>
+                    class="nav-link active text-sm text-brand-dark hover:text-brand-navy transition-colors pb-1">Who
+                    it's For</a>
                 <a href="why-piknpakit.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Why Us</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">Why
+                    Us</a>
                 <a href="about.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">About</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">About</a>
             </div>
+
+            <!-- CTA -->
             <div class="hidden md:block">
                 <a href="contact.html"
-                    class="bg-brand-navy text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors border border-transparent shadow-sm hover:shadow-md">
+                    class="bg-brand-navy text-white px-6 py-2.5 rounded-md text-sm font-medium hover:bg-brand-dark transition-all shadow-sm hover:shadow-md">
                     Request a Demo
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-brand-navy p-2 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -79,6 +89,8 @@
             </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white">
         <div class="flex flex-col h-full p-6">
             <div class="flex justify-between items-center mb-8">
@@ -94,7 +106,8 @@
             <div class="flex flex-col space-y-6 text-lg font-medium text-brand-navy">
                 <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
                 <a href="how-it-works.html" class="border-b border-gray-100 pb-2">How it Works</a>
-                <a href="who-its-for.html" class="text-brand-teal border-b border-gray-100 pb-2">Who it's For</a>
+                <a href="who-its-for.html" class="text-brand-teal font-bold border-b border-gray-100 pb-2">Who it's
+                    For</a>
                 <a href="why-piknpakit.html" class="border-b border-gray-100 pb-2">Why Us</a>
                 <a href="about.html" class="border-b border-gray-100 pb-2">About</a>
                 <a href="contact.html" class="text-brand-teal pt-2">Request a Demo →</a>
@@ -103,151 +116,196 @@
     </div>
 
     <!-- Header -->
-    <header class="bg-brand-gray/30 py-16 text-center">
-        <div class="container mx-auto px-6">
-            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 animate-load">Who it's for</h1>
-            <p class="text-gray-600 max-w-2xl mx-auto text-lg animate-load anim-delay-100">Tailored solutions for every
+    <header class="hero-system relative py-20 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(#252E5A 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div
+                class="inline-block mb-4 px-3 py-1 bg-brand-navy/5 rounded-full border border-brand-navy/10 animate-load">
+                <span class="text-xs font-semibold text-brand-navy tracking-wide uppercase">Target Audience</span>
+            </div>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 animate-load anim-delay-100">Who
+                it's for</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg animate-load anim-delay-200">Tailored solutions for every
                 stage of growth.</p>
         </div>
     </header>
 
     <!-- Segments Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-5xl space-y-16">
+    <section class="section-system bg-system-alt">
+        <div class="container mx-auto px-6 max-w-5xl space-y-12">
 
             <!-- Segment 1: Instagram / TikTok Sellers -->
-            <div class="flex flex-col lg:flex-row gap-12 items-start reveal-on-scroll">
-                <div class="lg:w-1/2 p-8 bg-brand-navy/5 rounded-2xl border border-brand-navy/10">
-                    <div class="flex items-center mb-6">
-                        <span class="p-3 bg-brand-navy text-white rounded-lg mr-4 shadow-sm">
-                            <img src="assets/icons/PickThem.png" alt="Sellers"
-                                class="w-6 h-6 object-contain brightness-0 invert">
-                        </span>
-                        <h2 class="font-display text-2xl font-bold text-brand-navy">Instagram / TikTok Sellers</h2>
+            <div class="card-system p-0 overflow-hidden reveal-on-scroll">
+                <div class="flex flex-col lg:flex-row relative">
+                    <!-- System Cue: Arrow -->
+                    <div
+                        class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full items-center justify-center z-10 shadow-sm text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-6 font-medium">For the creators turning into
-                        entrepreneurs.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> Answering "Is this
-                                available?" via DM all day.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> Messy manual tracking in
-                                notebooks or WhatsApp.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lg:w-1/2 pt-4">
-                    <h3 class="font-display text-xl font-bold text-brand-teal mb-4">How PIK N PAKIT helps</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        We professionalize your operations instantly. You get a system that tracks your stock, so you
-                        can just say "Yes, link in bio" and let us handle the packing and shipping. No more DM chaos.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Time Saved</h4>
-                            <p class="text-xs text-gray-500">Stop packing boxes at 2 AM.</p>
+                    <div class="lg:w-1/2 p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <span class="p-3 bg-brand-navy text-white rounded-lg mr-4 shadow-sm">
+                                <img src="assets/icons/PickThem.png" alt="Sellers"
+                                    class="w-6 h-6 object-contain brightness-0 invert">
+                            </span>
+                            <h2 class="font-display text-2xl font-bold text-brand-navy">Social Sellers</h2>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Professionalism</h4>
-                            <p class="text-xs text-gray-500">Unbranded or custom packaging.</p>
+                        <p class="text-gray-700 leading-relaxed mb-6 font-medium">For the creators turning into
+                            entrepreneurs.</p>
+                        <div class="space-y-3 bg-red-50 p-6 rounded-xl border border-red-100">
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> Answering "Is this
+                                    available?" via DM all day.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> Messy manual tracking in
+                                    notebooks or WhatsApp.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 p-10 bg-gray-50/50">
+                        <h3 class="font-display text-lg font-bold text-brand-teal mb-4 flex items-center">
+                            <span class="w-2 h-2 bg-brand-teal rounded-full mr-2"></span> System Solution
+                        </h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-sm">
+                            We professionalize your operations instantly. You get a system that tracks your stock, so
+                            you can just say "Yes, link in bio" and let us handle the packing and shipping.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Time Saved</h4>
+                                <p class="text-xs text-gray-500">Stop packing boxes at 2 AM.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Professionalism</h4>
+                                <p class="text-xs text-gray-500">Unbranded or custom packaging.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <hr class="border-gray-100">
 
             <!-- Segment 2: Small E-commerce Brands -->
-            <div class="flex flex-col lg:flex-row gap-12 items-start reveal-on-scroll delay-100">
-                <div class="lg:w-1/2 p-8 bg-brand-teal/5 rounded-2xl border border-brand-teal/10">
-                    <div class="flex items-center mb-6">
-                        <span class="p-3 bg-brand-teal text-white rounded-lg mr-4 shadow-sm">
-                            <img src="assets/icons/DASHBOARD.png" alt="Brands"
-                                class="w-6 h-6 object-contain brightness-0 invert">
-                        </span>
-                        <h2 class="font-display text-2xl font-bold text-brand-navy">Small E-commerce Brands</h2>
+            <div class="card-system p-0 overflow-hidden reveal-on-scroll delay-100">
+                <div class="flex flex-col lg:flex-row relative">
+                    <!-- System Cue: Arrow -->
+                    <div
+                        class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full items-center justify-center z-10 shadow-sm text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-6 font-medium">For growing brands dealing with daily
-                        volume.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> Unpredictable delivery
-                                times hurting reputation.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> Stockouts or overstocking
-                                due to poor data.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lg:w-1/2 pt-4">
-                    <h3 class="font-display text-xl font-bold text-brand-teal mb-4">How PIK N PAKIT helps</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Reliability is your currency. We provide the dashboard visibility you need to promise delivery
-                        dates and keep them. Plus, accurate inventory alerts prevent you from selling what you don't
-                        have.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Brand Trust</h4>
-                            <p class="text-xs text-gray-500">Consistent delivery experience.</p>
+                    <div class="lg:w-1/2 p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <span class="p-3 bg-brand-teal text-white rounded-lg mr-4 shadow-sm">
+                                <img src="assets/icons/DASHBOARD.png" alt="Brands"
+                                    class="w-6 h-6 object-contain brightness-0 invert">
+                            </span>
+                            <h2 class="font-display text-2xl font-bold text-brand-navy">E-commerce Brands</h2>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Growth Ready</h4>
-                            <p class="text-xs text-gray-500">Scale without renting a warehouse.</p>
+                        <p class="text-gray-700 leading-relaxed mb-6 font-medium">For growing brands dealing with daily
+                            volume.</p>
+                        <div class="space-y-3 bg-red-50 p-6 rounded-xl border border-red-100">
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> Unpredictable delivery
+                                    times hurting reputation.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> Stockouts or overstocking
+                                    due to poor data.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 p-10 bg-gray-50/50">
+                        <h3 class="font-display text-lg font-bold text-brand-teal mb-4 flex items-center">
+                            <span class="w-2 h-2 bg-brand-teal rounded-full mr-2"></span> System Solution
+                        </h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-sm">
+                            Reliability is your currency. We provide the dashboard visibility you need to promise
+                            delivery dates and keep them. Plus, accurate inventory alerts prevent you from selling what
+                            you don't have.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Brand Trust</h4>
+                                <p class="text-xs text-gray-500">Consistent delivery experience.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Growth Ready</h4>
+                                <p class="text-xs text-gray-500">Scale without renting a warehouse.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr class="border-gray-100">
-
             <!-- Segment 3: SMEs & Retailers -->
-            <div class="flex flex-col lg:flex-row gap-12 items-start reveal-on-scroll delay-200">
-                <div class="lg:w-1/2 p-8 bg-gray-50 rounded-2xl border border-gray-200">
-                    <div class="flex items-center mb-6">
-                        <span class="p-3 bg-brand-dark text-white rounded-lg mr-4 shadow-sm">
-                            <img src="assets/icons/SCALE GROWTH.png" alt="SMEs"
-                                class="w-6 h-6 object-contain brightness-0 invert">
-                        </span>
-                        <h2 class="font-display text-2xl font-bold text-brand-navy">SMEs & Retailers</h2>
+            <div class="card-system p-0 overflow-hidden reveal-on-scroll delay-200">
+                <div class="flex flex-col lg:flex-row relative">
+                    <!-- System Cue: Arrow -->
+                    <div
+                        class="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full items-center justify-center z-10 shadow-sm text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mb-6 font-medium">For established businesses optimizing
-                        logistics.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> High overhead costs of
-                                warehousing and staff.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-red-500 mr-2 font-bold select-none">•</span>
-                            <span class="text-sm text-gray-600"><strong>Pain Point:</strong> Slow Cash on Delivery
-                                cycles affecting cash flow.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lg:w-1/2 pt-4">
-                    <h3 class="font-display text-xl font-bold text-brand-teal mb-4">How PIK N PAKIT helps</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Outsource the headache. We act as your logistics arm, offering economies of scale and technology
-                        you don't need to build yourself. Our fast COD settlement policies are designed for serious
-                        business cash flow.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Cost Efficiency</h4>
-                            <p class="text-xs text-gray-500">Variable costs instead of fixed.</p>
+                    <div class="lg:w-1/2 p-10 bg-white border-b lg:border-b-0 lg:border-r border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <span class="p-3 bg-brand-dark text-white rounded-lg mr-4 shadow-sm">
+                                <img src="assets/icons/SCALE GROWTH.png" alt="SMEs"
+                                    class="w-6 h-6 object-contain brightness-0 invert">
+                            </span>
+                            <h2 class="font-display text-2xl font-bold text-brand-navy">SMEs & Retailers</h2>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                            <h4 class="font-bold text-brand-navy text-sm mb-1">Cash Flow</h4>
-                            <p class="text-xs text-gray-500">Faster access to your revenue.</p>
+                        <p class="text-gray-700 leading-relaxed mb-6 font-medium">For established businesses optimizing
+                            logistics.</p>
+                        <div class="space-y-3 bg-red-50 p-6 rounded-xl border border-red-100">
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> High overhead costs of
+                                    warehousing and staff.</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-red-500 mr-2 font-bold select-none">•</span>
+                                <span class="text-sm text-gray-700"><strong>Problem:</strong> Slow Cash on Delivery
+                                    cycles affecting cash flow.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 p-10 bg-gray-50/50">
+                        <h3 class="font-display text-lg font-bold text-brand-teal mb-4 flex items-center">
+                            <span class="w-2 h-2 bg-brand-teal rounded-full mr-2"></span> System Solution
+                        </h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-sm">
+                            Outsource the headache. We act as your logistics arm, offering economies of scale and
+                            technology you don't need to build yourself. Our fast COD settlement policies are designed
+                            for serious business.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Cost Efficiency</h4>
+                                <p class="text-xs text-gray-500">Variable costs instead of fixed.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <h4 class="font-bold text-brand-navy text-sm mb-1">Cash Flow</h4>
+                                <p class="text-xs text-gray-500">Faster access to your revenue.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

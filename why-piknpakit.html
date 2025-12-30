@@ -48,29 +48,39 @@
 <body class="bg-white text-brand-dark font-sans flex flex-col min-h-screen">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
         <div class="container mx-auto flex items-center justify-between h-24">
+            <!-- Logo -->
             <a href="index.html" class="flex-shrink-0">
                 <img src="assets/images/logos/with_name.png" alt="PIK N PAKIT" class="h-24 w-auto">
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-10">
                 <a href="index.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Home</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">Home</a>
                 <a href="how-it-works.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">How it Works</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">How
+                    it Works</a>
                 <a href="who-its-for.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">Who it's For</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">Who
+                    it's For</a>
                 <a href="why-piknpakit.html"
-                    class="text-brand-navy font-bold text-sm border-b-2 border-brand-navy pb-1">Why Us</a>
+                    class="nav-link active text-sm text-brand-dark hover:text-brand-navy transition-colors pb-1">Why
+                    Us</a>
                 <a href="about.html"
-                    class="text-brand-dark font-medium text-sm hover:text-brand-teal transition-colors">About</a>
+                    class="nav-link text-sm font-medium text-brand-dark hover:text-brand-navy transition-colors pb-1">About</a>
             </div>
+
+            <!-- CTA -->
             <div class="hidden md:block">
                 <a href="contact.html"
-                    class="bg-brand-navy text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors border border-transparent shadow-sm hover:shadow-md">
+                    class="bg-brand-navy text-white px-6 py-2.5 rounded-md text-sm font-medium hover:bg-brand-dark transition-all shadow-sm hover:shadow-md">
                     Request a Demo
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-brand-navy p-2 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -79,6 +89,8 @@
             </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white">
         <div class="flex flex-col h-full p-6">
             <div class="flex justify-between items-center mb-8">
@@ -95,7 +107,7 @@
                 <a href="index.html" class="border-b border-gray-100 pb-2">Home</a>
                 <a href="how-it-works.html" class="border-b border-gray-100 pb-2">How it Works</a>
                 <a href="who-its-for.html" class="border-b border-gray-100 pb-2">Who it's For</a>
-                <a href="why-piknpakit.html" class="text-brand-teal border-b border-gray-100 pb-2">Why Us</a>
+                <a href="why-piknpakit.html" class="text-brand-teal font-bold border-b border-gray-100 pb-2">Why Us</a>
                 <a href="about.html" class="border-b border-gray-100 pb-2">About</a>
                 <a href="contact.html" class="text-brand-teal pt-2">Request a Demo →</a>
             </div>
@@ -103,128 +115,153 @@
     </div>
 
     <!-- Header -->
-    <header class="bg-brand-gray/30 py-16 text-center">
-        <div class="container mx-auto px-6">
-            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 animate-load">Why PIK N PAKIT
-            </h1>
-            <p class="text-gray-600 max-w-2xl mx-auto text-lg animate-load anim-delay-100">Technology, speed, and a
+    <header class="hero-system relative py-20 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(#252E5A 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div
+                class="inline-block mb-4 px-3 py-1 bg-brand-navy/5 rounded-full border border-brand-navy/10 animate-load">
+                <span class="text-xs font-semibold text-brand-navy tracking-wide uppercase">The Logic</span>
+            </div>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 animate-load anim-delay-100">Why
+                PIK N PAKIT</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg animate-load anim-delay-200">Technology, speed, and a
                 partner who cares.</p>
         </div>
     </header>
 
     <!-- Content Sections -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-5xl space-y-24">
+    <section class="section-system bg-system-alt">
+        <div class="container mx-auto px-6 max-w-6xl space-y-8">
 
             <!-- Point 1: Integrated System -->
-            <div class="flex flex-col md:flex-row items-center gap-12 reveal-on-scroll">
-                <div class="md:w-1/2">
-                    <div
-                        class="bg-brand-navy/5 p-8 rounded-2xl flex items-center justify-center h-64 border border-brand-navy/10">
-                        <!-- Placeholder for System UI Image/Illustration -->
-                        <span class="text-brand-navy/30 font-bold text-lg">[System Dashboard Visual]</span>
+            <div class="card-system p-8 reveal-on-scroll">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div
+                            class="bg-brand-navy/5 p-8 rounded-xl flex items-center justify-center h-64 border border-brand-navy/10 relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10"
+                                style="background-image: radial-gradient(#252E5A 1px, transparent 1px); background-size: 16px 16px;">
+                            </div>
+                            <!-- Placeholder for System UI Image/Illustration -->
+                            <span
+                                class="text-brand-navy/40 font-bold text-sm uppercase tracking-widest border border-brand-navy/20 px-4 py-2 rounded-md bg-white/50 backdrop-blur-sm">System
+                                Dashboard</span>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-4">One Integrated System
-                    </h2>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Stop using three different spreadsheets and a notebook to run your business. Our system connects
-                        your inventory, your orders, and your delivery partners in one place.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Syncs with your sales channels
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Real-time stock updates
-                        </li>
-                    </ul>
+                    <div class="md:w-1/2">
+                        <h2 class="font-display text-2xl font-bold text-brand-navy mb-4">One Integrated System</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            Stop using three different spreadsheets and a notebook to run your business. Our system
+                            connects your inventory, your orders, and your delivery partners in one place.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Syncs with your sales channels
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Real-time stock updates
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <!-- Point 2: SaaS Logic -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal-on-scroll delay-100">
-                <div class="md:w-1/2">
-                    <div
-                        class="bg-brand-teal/5 p-8 rounded-2xl flex items-center justify-center h-64 border border-brand-teal/10">
-                        <!-- Placeholder for Map/Local Visual -->
-                        <span class="text-brand-teal/30 font-bold text-lg">[Local Logistics Visual]</span>
+            <div class="card-system p-8 reveal-on-scroll delay-100">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div
+                            class="bg-brand-teal/5 p-8 rounded-xl flex items-center justify-center h-64 border border-brand-teal/10 relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-10"
+                                style="background-image: radial-gradient(#3B87A9 1px, transparent 1px); background-size: 16px 16px;">
+                            </div>
+                            <!-- Placeholder for Map/Local Visual -->
+                            <span
+                                class="text-brand-teal/60 font-bold text-sm uppercase tracking-widest border border-brand-teal/20 px-4 py-2 rounded-md bg-white/50 backdrop-blur-sm">Local
+                                Logistics</span>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-4">SaaS Logic, Local
-                        Reality</h2>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        We built our software with the discipline of a global SaaS product (Software as a Service) but
-                        adapted it for the realities of the Lebanese market—cash handling, WhatsApp culture, and dynamic
-                        addresses.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Built for COD workflows
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Data-driven decision making
-                        </li>
-                    </ul>
+                    <div class="md:w-1/2">
+                        <h2 class="font-display text-2xl font-bold text-brand-navy mb-4">SaaS Logic, Local Reality</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            We built our software with the discipline of a global SaaS product (Software as a Service)
+                            but adapted it for the realities of the Lebanese market—cash handling, WhatsApp culture, and
+                            dynamic addresses.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Built for COD workflows
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Data-driven decision making
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <!-- Point 3: Boutique Attention -->
-            <div class="flex flex-col md:flex-row items-center gap-12 reveal-on-scroll delay-200">
-                <div class="md:w-1/2">
-                    <div
-                        class="bg-gray-50 p-8 rounded-2xl flex items-center justify-center h-64 border border-gray-200">
-                        <!-- Placeholder for Handshake/People Visual -->
-                        <span class="text-gray-400 font-bold text-lg">[Partnership Visual]</span>
+            <div class="card-system p-8 reveal-on-scroll delay-200">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div
+                            class="bg-gray-50 p-8 rounded-xl flex items-center justify-center h-64 border border-gray-200 relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-20"
+                                style="background-image: radial-gradient(#1E2433 1px, transparent 1px); background-size: 16px 16px;">
+                            </div>
+                            <!-- Placeholder for Handshake/People Visual -->
+                            <span
+                                class="text-brand-dark/40 font-bold text-sm uppercase tracking-widest border border-gray-300 px-4 py-2 rounded-md bg-white/50 backdrop-blur-sm">Partnership</span>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="font-display text-2xl md:text-3xl font-bold text-brand-navy mb-4">Boutique Attention,
-                        Scalable Systems</h2>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        You're not just a row in a database. We offer the personal relationship of a partner with the
-                        efficiency of a machine. Call us, and a human answers. scale up, and the system handles it.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Dedicated account support
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            No hidden fees or surprises
-                        </li>
-                    </ul>
+                    <div class="md:w-1/2">
+                        <h2 class="font-display text-2xl font-bold text-brand-navy mb-4">Boutique Attention, Scalable
+                            Systems</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-sm">
+                            You're not just a row in a database. We offer the personal relationship of a partner with
+                            the efficiency of a machine. Call us, and a human answers. scale up, and the system handles
+                            it.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Dedicated account support
+                            </li>
+                            <li class="flex items-center text-gray-700 text-sm font-medium">
+                                <svg class="w-5 h-5 text-brand-teal mr-3" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                No hidden fees or surprises
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

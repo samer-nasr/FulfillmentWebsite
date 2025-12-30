@@ -6,6 +6,8 @@
     --color-teal: #3B87A9;
     --color-white: #FFFFFF;
     --color-dark-neutral: #1E2433;
+    --bg-system-alt: rgba(37, 46, 90, 0.03);
+    --border-system: #E2E8F0;
 }
 
 body {
@@ -24,7 +26,6 @@ h6 {
     font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -47,36 +48,115 @@ html {
     background: #94a3b8;
 }
 
-/* Utility for removing mobile tap highlight */
 * {
     -webkit-tap-highlight-color: transparent;
 }
 
 /* 
    ---------------------------
-   ANIMATIONS 
+   SYSTEM DESIGN UTILITIES 
    ---------------------------
-   Calm, predictable, controlled.
 */
 
-/* Initial hidden state for scroll reveals */
+/* Backgrounds */
+.bg-system-alt {
+    background-color: var(--bg-system-alt);
+}
+
+.bg-system-white {
+    background-color: #FFFFFF;
+}
+
+/* Section Spacing & Separators */
+.section-system {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-separator-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-system), transparent);
+}
+
+.section-separator-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-system), transparent);
+}
+
+/* Card Depth */
+.card-system {
+    background: #FFFFFF;
+    border: 1px solid var(--border-system);
+    border-radius: 0.75rem;
+    /* ~12px */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    /* shadow-sm equivalent */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-system:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+    border-color: #CBD5E1;
+    transform: translateY(-2px);
+}
+
+/* System Cues (Lines, dotted dividers) */
+.system-divider-dashed {
+    border-top: 1px dashed #CBD5E1;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero System Style */
+.hero-system {
+    background: linear-gradient(180deg, rgba(37, 46, 90, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+    border-bottom: 1px solid var(--border-system);
+}
+
+/* Navigation Active State */
+.nav-link.active {
+    color: var(--color-navy);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-navy);
+}
+
+/* 
+   ---------------------------
+   REFINED MOTION 
+   ---------------------------
+*/
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(16px);
-    /* ~1rem move up */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(10px);
+    /* 10px only */
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: opacity, transform;
 }
 
-/* Visible state */
 .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Stagger delays */
 .delay-100 {
     transition-delay: 100ms;
+}
+
+.delay-150 {
+    transition-delay: 150ms;
 }
 
 .delay-200 {
@@ -87,15 +167,10 @@ html {
     transition-delay: 300ms;
 }
 
-.delay-400 {
-    transition-delay: 400ms;
-}
-
-/* Page Load Animation Keyframes */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(8px);
     }
 
     to {
@@ -104,14 +179,11 @@ html {
     }
 }
 
-/* Utility for Hero sections or immediate load items */
 .animate-load {
-    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0;
-    /* Start hidden */
 }
 
-/* Delays for animation keyframes */
 .anim-delay-100 {
     animation-delay: 0.1s;
 }
@@ -124,24 +196,13 @@ html {
     animation-delay: 0.3s;
 }
 
-.anim-delay-400 {
-    animation-delay: 0.4s;
-}
-
-/* 
-   ---------------------------
-   REDUCED MOTION 
-   ---------------------------
-*/
 @media (prefers-reduced-motion: reduce) {
-    .reveal-on-scroll {
-        transition: none;
-        opacity: 1;
-        transform: none;
-    }
 
+    .reveal-on-scroll,
     .animate-load {
+        transition: none;
         animation: none;
         opacity: 1;
+        transform: none;
     }
 }
